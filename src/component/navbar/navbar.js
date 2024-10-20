@@ -19,8 +19,8 @@ export const Navbar = ({ dark, setDark }) => {
                 <div><EventNoteIcon /></div>
                 <div><StarBorderIcon /></div>
                 <div className='text-gray-500'>Dashboard</div>
-                <div className='text-gray-500'>/</div>
-                <div>{location.pathname[1]?.toUpperCase() + location.pathname.slice(2)}</div>
+                <div className='text-gray-500'>{location.pathname.slice(1) && '/'}</div>
+                <div>{location.pathname.slice(1) && location.pathname[1]?.toUpperCase() + location.pathname.slice(2)}</div>
             </div>
             <div className='flex w-2/4 justify-end items-center gap-6'>
                 <SearchBar filter={true} />
