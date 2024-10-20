@@ -69,6 +69,7 @@ export const boxChats = [
     {
         title: 'Customers',
         reach: '3720',
+        reachType:'',
         growth: '+11.20%',
         growthRate: 'possitive',
         className:'bg-custom-blue text-black'
@@ -76,20 +77,23 @@ export const boxChats = [
     {
         title: 'Orders',
         reach: '1219',
+        reachType:'',
         growth: '-0.03%',
         growthRate: 'negative',
         className:'bg-custom-grey dark:bg-custom-black-5 dark:text-white'
     },
     {
         title: 'Revenue',
-        reach: '$695',
+        reach: '695',
+        reachType:'$',
         growth: '+15.03%',
         growthRate: 'possitive',
         className:'bg-custom-grey dark:bg-custom-black-5 dark:text-white'
     },
     {
         title: 'Growth',
-        reach: '30.1%',
+        reach: '30.1',
+        reachType:'%',
         growth: '+6.08%',
         growthRate: 'possitive',
         className:'bg-custom-grey-1 text-black'
