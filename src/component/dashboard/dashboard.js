@@ -19,8 +19,8 @@ export const Dashboard = () => {
             <div className='flex justify-start w-[100%]'>
                 <div className='font-bold'>{'eCommerce'}</div>
             </div>
-            <div className='flex justify-center items-center w-[100%] gap-6'>
-                <div className='w-2/4 grid grid-cols-2 row-2 gap-8 '>
+            <div className='flex flex-col lg:flex-row justify-center items-center w-[100%] gap-6'>
+                <div className='lg:w-2/4 grid grid-col-1 lg:grid-cols-2 row-2 gap-8 w-[100%]'>
                     {
                         boxChats.map((item) => {
                             return <BoxChats stats={item} />
@@ -28,16 +28,16 @@ export const Dashboard = () => {
                         })
                     }
                 </div>
-                <div className='w-2/4 bg-custom-grey dark:bg-custom-black-5 dark:text-custom-grey rounded-[20px]'>
+                <div className='lg:w-2/4 bg-custom-grey dark:bg-custom-black-5 dark:text-custom-grey rounded-[20px] w-[100%]'>
                     <div className='flex flex-col items-start w-[100%]'>
                         <div className='font-bold relative left-[26px] top-[20px]'>{'Projections vs Actuals'}</div>
                         <BarChartGraph />
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center items-center w-[100%] gap-6'>
-                <div className='w-3/4 bg-custom-grey dark:bg-custom-black-5 rounded-[20px]'>
-                    <div className='flex gap-5 text-left m-[20px] w-[100%] justify-start items-center'>
+            <div className='flex flex-col lg:flex-row justify-center items-center w-[100%] gap-6'>
+                <div className='lg:w-3/4 w-[100%] bg-custom-grey dark:bg-custom-black-5 rounded-[20px]'>
+                    <div className='flex flex-col lg:flex-row gap-5 text-left m-[20px] w-[100%] justify-start items-center'>
                         <spam className="font-bold ">
                             {'Top Selling Product'}
                         </spam>
@@ -59,7 +59,7 @@ export const Dashboard = () => {
                     </div>
                     <CurvedLineChart />
                 </div>
-                <div className='w-1/4'>
+                <div className='lg:w-1/4 w-[100%]'>
                     <div className='flex flex-col items-center justify-start w-[100%] pb-[20px] bg-custom-grey dark:bg-custom-black-5 rounded-[20px]'>
                         <div className='font-bold text-left m-[20px] w-[80%]'>{'Revenue by Location'}</div>
                         <div>
@@ -74,12 +74,12 @@ export const Dashboard = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center items-center w-[100%] gap-6'>
-                <div className='w-3/4 bg-custom-grey dark:bg-custom-black-5 rounded-[20px] flex flex-col items-center'>
+            <div className='flex flex-col lg:flex-row justify-center items-center w-[100%] gap-6'>
+                <div className='lg:w-3/4 w-[100%] bg-custom-grey dark:bg-custom-black-5 rounded-[20px] flex flex-col items-center'>
                     <div className='font-bold text-left m-[20px] w-[100%] relative left-[30px]'>{'Top Selling Product'}</div>
                     <ProductTable />
                 </div>
-                <div className='w-1/4'>
+                <div className='lg:w-1/4 w-[100%]'>
                     <div className='flex flex-col items-center justify-start w-[100%] pb-[20px] bg-custom-grey dark:bg-custom-black-5 rounded-[20px]'>
                         <div className='font-bold text-left m-[20px] w-[80%]'>{'Total Sales'}</div>
                         <div>

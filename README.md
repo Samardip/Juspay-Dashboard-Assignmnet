@@ -18,6 +18,8 @@ The initial table designs were altered slightly to incorporate additional lines 
 Pie Chart Customization:
 Due to the limitations in customizing the MUI Pie Chart component, the design was revised to maintain simplicity and ensure the chart was functional and visually appealing. A more standard pie chart was implemented to meet the design requirements.
 
+Responsive Design:
+The original design provided was not mobile-friendly. However, I have optimized the layout to be responsive up to tablet (iPad) screen sizes. The website can also be viewed effectively on mobile devices desktop mode (preferably tested in chrome browser desktop mode).
 
 Challenges Faced
 

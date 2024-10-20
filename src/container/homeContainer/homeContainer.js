@@ -11,12 +11,12 @@ export const HomeContainer = () => {
   return (
     <UserContext.Provider value={dark}>
       <div className={`flex w-100% ${dark ? 'bg-black text-white' : ''}`}>
-        <div className='border-l-2 border-y-2 dark:border-gray-600 w-1/6 '><Sidebar /></div>
-        <div className='border-[2px] w-4/6 h-[99.4vh] dark:border-gray-600 overflow-y-scroll'>
+        <div className='border-l-2 border-y-2 dark:border-gray-600 lg:w-1/6 '><Sidebar /></div>
+        <div className='border-[2px] lg:w-4/6 h-[99.4vh] dark:border-gray-600 overflow-y-scroll'>
           <Navbar dark={dark} setDark={setDark} />
           <Outlet/>
         </div>
-        <div className='border-r-2 border-y-2 dark:border-gray-600 w-1/6'><Activitybar /></div>
+        <div className='border-r-2 border-y-2 dark:border-gray-600 lg:w-1/6'><Activitybar /></div>
       </div>
     </UserContext.Provider>
   )
