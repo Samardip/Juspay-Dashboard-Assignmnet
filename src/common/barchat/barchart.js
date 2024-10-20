@@ -5,9 +5,6 @@ import { UserContext } from '../../useHooks/useDarkModeContext/useDarkModeContex
 
 export default function BarChartGraph() {
     const dark = React.useContext(UserContext);
-    console.log(dark);
-    // backgroundColor:dark?'custom-black-5':'',
-    // color: dark ? 'rgba(100, 100, 100, 1)' : 'var(--Secondary-Cyan, rgba(168, 197, 218, 1))',
     return (
         <BarChart
             className='text-white'

@@ -5,8 +5,6 @@ import { dataset } from '../../useHooks/useCurveLineChart/useCurveLineChart';
 
 export default function CurveLineChart() {
     const dark = React.useContext(UserContext);
-    console.log(dark);
-
     return (
         <LineChart
             className='text-white'
