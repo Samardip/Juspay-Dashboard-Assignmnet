@@ -1,5 +1,6 @@
 Juspay Dashboard Assignment
-hostedlink: https://juspay-dashboard-assignmnet-7pnmi5ati-samardips-projects.vercel.app
+hostedlink: https://juspay-dashboard-assignmnet.vercel.app/default
+
 
 This project is a dashboard application that displays data using visual components like charts and tables, with additional features like dark mode and customization. This repository includes code that demonstrates how to create an interactive and responsive dashboard using modern frontend tools.
 
