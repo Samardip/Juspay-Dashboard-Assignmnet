@@ -7,14 +7,14 @@ import NotFound from './common/notFound/notFound';
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Navigate to="/default" replace />} />
-      <Route path="/default" element={<HomeContainer />}>
-        <Route index element={<Dashboard />} /> 
-      </Route>
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeContainer />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/default" element={<Dashboard />} />
+          <Route path="/*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
