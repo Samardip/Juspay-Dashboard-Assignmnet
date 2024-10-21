@@ -12,7 +12,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 
 Chart.register(ArcElement, Tooltip, Legend);
 
-export const Dashboard = () => {
+const Dashboard = () => {
 
     return (
         <div className='mx-[30px] my-[30px] flex flex-col justify-between items-center gap-10 z-0 dark:border-gray-600'>
@@ -101,3 +101,5 @@ export const Dashboard = () => {
         </div>
     )
 }
+
+export default Dashboard;

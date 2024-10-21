@@ -6,7 +6,7 @@ import { UserContext } from '../../useHooks/useDarkModeContext/useDarkModeContex
 import { HomeContainerHooks } from '../../useHooks/useHomeContainer/useHomeContainer';
 import { Outlet } from 'react-router-dom';
 
-export const HomeContainer = () => {
+const HomeContainer = () => {
   const {dark,setDark} = HomeContainerHooks();
   return (
     <UserContext.Provider value={dark}>
@@ -21,3 +21,5 @@ export const HomeContainer = () => {
     </UserContext.Provider>
   )
 }
+
+export default HomeContainer;
