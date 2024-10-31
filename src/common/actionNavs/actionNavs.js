@@ -7,7 +7,7 @@ import { KeyboardArrowDown } from '@mui/icons-material';
 export const ActionNavs = ({ type, item, setDashboardData, setPagesData }) => {
     return (
         <Link to={`${item.path}`}>
-            <div className={`flex justify-start gap-2 my-2 cursor-pointer mx-[20px] ${type === 'expand' && item.active && 'bg-gray-100 dark:bg-custom-black-5 rounded-[15px] py-1'}`}
+            <div className={`flex justify-start gap-2 my-2 cursor-pointer mx-[20px] ${(type === 'expand' && item.active)? 'bg-gray-100 dark:bg-custom-black-5 hover:bg-gray-200 dark:hover:bg-custom-black-7 transition duration-200 ease-in-out transform hover:scale-105 rounded-[15px] py-1':'transition duration-200 ease-in-out transform hover:scale-105'}`}
                 onClick={() => {
                     if (typeof (setDashboardData) === 'function') {
                         setDashboardData(item);
