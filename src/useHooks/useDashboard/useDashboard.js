@@ -47,22 +47,26 @@ export const salesData = [
     {
         title: 'Direct',
         value: '$372k',
-        progress: '72'
+        progress: '72',
+        className:'text-custom-pie-blue'
     },
     {
         title: 'Affiliate',
         value: '$439k',
-        progress: '39'
+        progress: '39',
+        className:'text-custom-pie-black'
     },
     {
         title: 'Sponsered',
         value: '$425k',
-        progress: '25'
+        progress: '25',
+        className:'text-custom-pie-green'
     },
     {
         title: 'E-mail',
         value: '$169k',
-        progress: '69'
+        progress: '69',
+        className:'text-custom-pie-lightBlue'
     },
 ]
 export const boxChats = [

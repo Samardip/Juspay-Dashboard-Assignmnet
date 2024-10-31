@@ -345,15 +345,17 @@ export default function OrderListTable() {
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
         /> */}
-        <Pagination shape="rounded"
+        <Pagination
+
+          shape="rounded"
           sx={{
             color: dark ? 'white' : 'black', // Change color based on dark mode
             "& .MuiPaginationItem-root": {
               color: dark ? 'white' : 'black',  // Change the color of pagination items
             },
             "& .Mui-selected": {
-              backgroundColor: dark ? '#1976d2' : '',  // Change background of selected item in dark mode
-              color: dark ? 'white' : '',  // Keep the text white when selected in dark mode
+              backgroundColor: !dark ? '#d3d3d34a !important' : '#7474744a !important', // Set selected background to grey
+              color: dark ? 'white' : 'black', // Keep text color consistent for selected items
             },
             "& .MuiPaginationItem-ellipsis": {
               color: dark ? 'white' : 'black',  // Change the color of ellipsis
@@ -366,7 +368,7 @@ export default function OrderListTable() {
           component="div"
           count={5}
           rowsPerPage={rowsPerPage}
-          page={page}
+          page={1}
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage} />
       </Paper>

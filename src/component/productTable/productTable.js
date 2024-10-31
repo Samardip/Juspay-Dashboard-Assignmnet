@@ -7,8 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { UserContext } from '../../useHooks/useDarkModeContext/useDarkModeContext';
 
-function createData(name, price, quatity, amount) {
-  return { name, price, quatity, amount };
+function createData(name, price, quantity, amount) {
+  return { name, price, quantity, amount };
 }
 
 const rows = [
@@ -21,15 +21,18 @@ const rows = [
 
 export default function ProductTable() {
   const dark = React.useContext(UserContext);
+
   return (
-    <TableContainer sx={{
-      boxShadow: 'none', border: 'none',
-      background: dark ? 'rgb(39 39 39 / 5%)' : 'var(--Primary-Light, rgba(247, 249, 251, 1))',
-      width:'95%',
-    }} elevation={0}>
-      <Table 
-      // sx={{ minWidth: 550 }} 
-      aria-label="">
+    <TableContainer
+      sx={{
+        boxShadow: 'none',
+        border: 'none',
+        background: dark ? 'rgb(39 39 39 / 5%)' : 'var(--Primary-Light, rgba(247, 249, 251, 1))',
+        width: '95%',
+      }}
+      elevation={0}
+    >
+      <Table aria-label="product table">
         <TableHead>
           <TableRow>
             <TableCell sx={{ color: dark ? 'white !important' : 'grey' }} align="left">Name</TableCell>
@@ -38,16 +41,13 @@ export default function ProductTable() {
             <TableCell sx={{ color: dark ? 'white !important' : 'grey' }} align="right">Amount</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody >
+        <TableBody>
           {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell sx={{ color: dark ? 'white !important' : '' }} align="left">{row.name}</TableCell>
-              <TableCell sx={{ color: dark ? 'white !important' : '' }} align="right">{row.price}</TableCell>
-              <TableCell sx={{ color: dark ? 'white !important' : '' }} align="right">{row.quatity}</TableCell>
-              <TableCell sx={{ color: dark ? 'white !important' : '' }} align="right">{row.amount}</TableCell>
+            <TableRow key={row.name}>
+              <TableCell sx={{ color: dark ? 'white !important' : '', borderBottom: 'none' }} align="left">{row.name}</TableCell>
+              <TableCell sx={{ color: dark ? 'white !important' : '', borderBottom: 'none' }} align="right">{row.price}</TableCell>
+              <TableCell sx={{ color: dark ? 'white !important' : '', borderBottom: 'none' }} align="right">{row.quantity}</TableCell>
+              <TableCell sx={{ color: dark ? 'white !important' : '', borderBottom: 'none' }} align="right">{row.amount}</TableCell>
             </TableRow>
           ))}
         </TableBody>

@@ -1,13 +1,13 @@
 import React from 'react'
 
 export const ActivityNavs = (
-    { activityDetails, profileDash, time }
+    { activityDetails, profileDash, time,notifications,index }
 ) => {
     return (
         <>
             <div className='flex justify-start gap-2 mx-[20px] mt-[10px] font-normal'>
                 <div className='flex flex-col justify-center items-center mt-[2px]'>
-                    <div className='border-[2px] border-gray-200 dark:text-black rounded-[50%] bg-gray-200 h-[25px] w-[25px] flex flex-col justify-center items-center'>
+                    <div className={`border-[2px] dark:text-black ${notifications?`rounded-[6px] ${index%2===1?'bg-gray-100 border-gray-100':'bg-blue-50 border-blue-50'}`:'rounded-[50%]'} h-[25px] w-[25px] flex flex-col justify-center items-center`}>
                         {activityDetails.icon}
                     </div>
                     {

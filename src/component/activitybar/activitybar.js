@@ -9,8 +9,8 @@ export const Activitybar = () => {
                 <div className='font-bold'>{notifications.heading}</div>
             </div>
             {
-                notifications.details.map((NotificationItem) => {
-                    return <ActivityNavs activityDetails={NotificationItem} profileDash={false} time={true}/>
+                notifications.details.map((NotificationItem ,index) => {
+                    return <ActivityNavs activityDetails={NotificationItem} profileDash={false} time={true} notifications={true} index={index}/>
                 })
             }
             <div className='flex justify-start gap-10 mx-[20px] my-[25px]'>
@@ -18,7 +18,7 @@ export const Activitybar = () => {
             </div>
             {
                 activities.details.map((activityDetails) => {
-                    return <ActivityNavs activityDetails={activityDetails} profileDash={true} time={true}/>
+                    return <ActivityNavs activityDetails={activityDetails} profileDash={true} time={true} notifications={false}/>
                 })
             }
             <div className='flex justify-start gap-10 mx-[20px] my-[25px]'>
@@ -26,7 +26,7 @@ export const Activitybar = () => {
             </div>
             {
                 contacts.details.map((contactDetails) => {
-                    return <ActivityNavs activityDetails={contactDetails} profileDash={false} time={false}/>
+                    return <ActivityNavs activityDetails={contactDetails} profileDash={false} time={false} notifications={false}/>
                 })
             }
         </div>

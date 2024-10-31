@@ -46,13 +46,13 @@ const Dashboard = () => {
                         </spam>
                         <div className={`flex justify-start gap-2 my-2 cursor-pointer `}>
                             <div className='text-gray-300 flex justify-center items-center' onClick={(e) => { }}>
-                                <CircleIcon style={{ fontSize: '10px' }} visibility={false} />
+                                <CircleIcon style={{ fontSize: '10px',color:'var(--Secondary-Indigo, rgba(149, 164, 252, 1))' }} visibility={false} />
                             </div>
                             <div className='text-[12px] flex justify-center items-center text-sm gap-2'>{'Current Week'}<spam className="font-bold">$58,211</spam></div>
                         </div>
                         <div className={`flex justify-start gap-2 my-2 cursor-pointer`}>
                             <div className='text-gray-300 flex justify-center items-center' onClick={(e) => { }}>
-                                <CircleIcon style={{ fontSize: '10px' }} visibility={false} />
+                                <CircleIcon style={{ fontSize: '10px'}} className='text-black dark:text-custom-blue' visibility={false} />
                             </div>
                             <div className='text-[12px] flex justify-center items-center text-sm gap-2'>{'Previous Week'}<spam className="font-bold">$62,501</spam></div>
                         </div>
@@ -81,16 +81,36 @@ const Dashboard = () => {
                 </div>
                 <div className='lg:w-1/4 w-[100%]'>
                     <div className='flex flex-col items-center justify-start w-[100%] pb-[20px] bg-custom-grey dark:bg-custom-black-5 rounded-[20px]'>
-                        <div className='font-bold text-left m-[20px] w-[80%]'>{'Total Sales'}</div>
-                        <div>
+                        <div className='font-bold text-left mx-[20px] mt-[20px] w-[80%]'>{'Total Sales'}</div>
+                        {/* <div>
                             <Doughnut data={data} width={150} height={150} />
+                        </div> */}
+                        <div className="donut-chart relative left-[-77px]">
+                        <div  className='relative top-[80px] left-[189.5px]'>
+                                <div className="bg-custom-pie-green rounded-[50%] w-[37px] h-[37.8px] relative left-[50px] bottom-[14px] " style={{ zIndex: 3 }}></div>
+                                <div className="bg-white dark:bg-[#000000ad] rounded-[50%] w-[38px] h-[38px] relative left-[53px] bottom-[54px] " style={{ zIndex: 2 }}></div>
+                            </div>
+                            <div  className='relative bottom-[22px] left-[119px]'>
+                                <div className="bg-custom-pie-purple rounded-[50%] w-[37px] h-[37.8px] relative left-[50px] bottom-[15px] " style={{ zIndex: 3 }}></div>
+                                <div className="bg-white dark:bg-[#000000ad] rounded-[50%] w-[38px] h-[38px] relative left-[45px] bottom-[52.8px] " style={{ zIndex: 2 }}></div>
+                            </div>
+                            <div className='relative top-[51px] left-[29.8px]'    >
+                                <div className="bg-custom-pie-blue rounded-[50%] w-[37px] h-[37px] relative left-[48.5px] bottom-[17px] " style={{ zIndex: 3 }}></div>
+                                <div className="bg-white dark:bg-[#000000ad] rounded-[50%] w-[38px] h-[37px] relative left-[49.7px] bottom-[49px] " style={{ zIndex: 2 }}></div>
+                            </div>
+                            <div>
+                                <div className="bg-custom-pie-lightBlue rounded-[50%] w-[37px] h-[37px] relative left-[50px] bottom-[16px] " style={{ zIndex: 3 }}></div>
+                                <div className="bg-white dark:bg-[#000000ad] rounded-[50%] w-[38px] h-[37px] relative left-[46.6px] bottom-[49px] " style={{ zIndex: 2 }}></div>
+                            </div>
+                            <div className="donut" style={{ zIndex: 1 }}>
+                                <div className="center-circle dark:bg-[#222222]"></div>
+                            </div>
                         </div>
                         {
                             salesData.map((item) => {
-                                return <ChartStats stats={item} type={'pie'} />
+                                return <ChartStats stats={item} type={'pie'}/>
                             })
                         }
-
                     </div>
                 </div>
             </div>
